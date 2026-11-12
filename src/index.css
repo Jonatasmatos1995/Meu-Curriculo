@@ -1,12 +1,7 @@
 @import "tailwindcss";
 @media print {
   @page {
-    margin: 10mm;
+    margin: 0;
     size: auto;
-  }
-  
-  /* Remove cabeçalhos e rodapés automáticos do navegador (data, hora e URL) */
-  body {
-    -webkit-print-color-adjust: exact;
   }
 }
