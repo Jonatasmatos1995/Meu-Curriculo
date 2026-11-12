@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, ExternalLink, Printer } from 'lucide-react';
+import { ExternalLink, Printer } from 'lucide-react';
 
 export default function App() {
   const handlePrint = () => {
@@ -8,7 +8,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-gray-100 py-10 px-4 print:bg-white print:py-0 print:px-0">
-      {/* Botão de Impressão */}
       <div className="max-w-4xl mx-auto mb-6 flex justify-end print:hidden">
         <button
           onClick={handlePrint}
@@ -19,13 +18,10 @@ export default function App() {
         </button>
       </div>
 
-      {/* Container Principal do Currículo */}
       <main className="max-w-4xl mx-auto bg-white shadow-md rounded-xl p-8 md:p-12 print:shadow-none print:p-0">
-        
-        {/* Cabeçalho */}
         <header className="border-b border-blue-200 pb-6 mb-8">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight">
-            Jónatas Junio de Matos
+            Jônatas Junio de Matos
           </h1>
           <p className="text-lg md:text-xl text-blue-600 font-medium mt-1">
             Analista de Dados | Business Intelligence (BI)
@@ -48,21 +44,35 @@ export default function App() {
             </div>
           </div>
 
-          <div className="flex items-center gap-1.5 text-sm text-gray-700 mt-2">
-            <span className="font-semibold text-gray-900">Link:</span>
-            <a
-              href="https://www.linkedin.com/in/jonatas-matos-056271235/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 hover:underline break-all flex items-center gap-1"
-            >
-              https://www.linkedin.com/in/jonatas-matos-056271235/
-              <ExternalLink size={14} className="inline" />
-            </a>
+          <div className="flex flex-wrap items-center gap-y-2 gap-x-6 text-sm text-gray-700 mt-2">
+            <div className="flex items-center gap-1.5">
+              <span className="font-semibold text-gray-900">LinkedIn:</span>
+              <a
+                href="https://www.linkedin.com/in/jonatas-matos-056271235/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline flex items-center gap-1"
+              >
+                linkedin.com/in/jonatas-matos-056271235
+                <ExternalLink size={14} className="inline" />
+              </a>
+            </div>
+
+            <div className="flex items-center gap-1.5">
+              <span className="font-semibold text-gray-900">GitHub:</span>
+              <a
+                href="https://github.com/Jonatasmatos1995"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline flex items-center gap-1"
+              >
+                github.com/Jonatasmatos1995
+                <ExternalLink size={14} className="inline" />
+              </a>
+            </div>
           </div>
         </header>
 
-        {/* Resumo Profissional */}
         <section className="mb-8">
           <h2 className="text-sm font-bold tracking-wider text-blue-600 uppercase border-b border-gray-200 pb-2 mb-4">
             Resumo Profissional
@@ -72,7 +82,48 @@ export default function App() {
           </p>
         </section>
 
-        {/* Experiência Profissional */}
+        <section className="mb-8">
+          <h2 className="text-sm font-bold tracking-wider text-blue-600 uppercase border-b border-gray-200 pb-2 mb-4">
+            Projetos em Destaque
+          </h2>
+
+          <div className="space-y-4">
+            <div>
+              <div className="flex flex-col md:flex-row md:justify-between md:items-center">
+                <h3 className="text-base font-bold text-gray-900">
+                  Dashboard de Vendas do Mercado
+                </h3>
+                <div className="flex items-center gap-4 text-sm mt-1 md:mt-0">
+                  <a
+                    href="https://github.com/Jonatasmatos1995/Dashboard-Vendas"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline font-medium flex items-center gap-1"
+                  >
+                    Código (GitHub)
+                    <ExternalLink size={13} />
+                  </a>
+                  <a
+                    href="https://dashboard-vendas-one.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline font-medium flex items-center gap-1"
+                  >
+                    Projeto Online (Vercel)
+                    <ExternalLink size={13} />
+                  </a>
+                </div>
+              </div>
+              <p className="text-sm text-gray-700 mt-1.5 leading-relaxed">
+                Desenvolvimento de painel gerencial para análise de indicadores comerciais, consolidando faturamento total, volume de vendas, ticket médio, ranking de produtos mais vendidos, gastos por cliente e distribuição por formas de pagamento.
+              </p>
+              <p className="text-xs text-gray-600 mt-1 font-medium">
+                Tecnologias: Power BI, DAX, SQL, HTML5/CSS3 e Git/GitHub.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className="mb-8">
           <h2 className="text-sm font-bold tracking-wider text-blue-600 uppercase border-b border-gray-200 pb-2 mb-4">
             Experiência Profissional
@@ -103,7 +154,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* Formação Acadêmica */}
         <section className="mb-8">
           <h2 className="text-sm font-bold tracking-wider text-blue-600 uppercase border-b border-gray-200 pb-2 mb-4">
             Formação Acadêmica
@@ -136,7 +186,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* Habilidades & Competências */}
         <section>
           <h2 className="text-sm font-bold tracking-wider text-blue-600 uppercase border-b border-gray-200 pb-2 mb-4">
             Habilidades & Competências
@@ -163,7 +212,6 @@ export default function App() {
             </span>
           </div>
         </section>
-
       </main>
     </div>
   );
