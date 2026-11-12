@@ -104,7 +104,7 @@ export default function App() {
                     <ExternalLink size={13} />
                   </a>
                   <a
-                    href="https://dashboard-vendas-one.vercel.app"
+                    href="https://dashboardvendas-rose.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:underline font-medium flex items-center gap-1"
